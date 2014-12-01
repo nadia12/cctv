@@ -1,0 +1,39 @@
+<div class="row">
+	<div class="bs-example">
+		<% if notice.present? %>
+			<div class="alert alert-warning fade in">
+		    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+		    <%= notice %>
+		  </div>
+	  <% end %>
+		<table class="table table-striped">
+      <thead>
+        <tr>
+          <th width="20%">First Name</th>
+          <th><%= @user.profile.first_name %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Last Name</b></td>
+          <td><%= @user.profile.last_name %></td>
+        </tr>
+        <tr>
+          <td><b>Email</b></td>
+          <td><%= @user.email %></td>
+        </tr>
+        <tr>
+          <td><b>Mobile Phone</b></td>
+          <td><%= @user.profile.mobile_phone %></td>
+        </tr>
+        <tr>
+          <td><b>Phone</b></td>
+          <td><%= @user.profile.phone %></td>
+        </tr>
+      </tbody>
+    </table>
+
+		<%= link_to 'Edit', edit_user_path(@user) %> |
+		<%= link_to 'Back', users_path %>
+	</div>
+</div>

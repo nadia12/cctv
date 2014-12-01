@@ -1,0 +1,8 @@
+<div class="row">    
+  <div class="bs-example">
+    <div class="panel-heading">Change User</div><br>
+    <%= form_for(:user, url: user_path(@user.id), method: "put", html: {class: "form-horizontal margin-none"}) do |f| %>
+      <%= render partial:"form", locals: {f: f, user_profile: @user.profile} %>
+    <% end %>
+  </div>
+</div>

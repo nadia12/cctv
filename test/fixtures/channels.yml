@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ip_address: 1
+  location_id: 1
+  name: MyString
+  status: MyString
+  port: 1
+  conn_type: MyString
+
+two:
+  ip_address: 1
+  location_id: 1
+  name: MyString
+  status: MyString
+  port: 1
+  conn_type: MyString

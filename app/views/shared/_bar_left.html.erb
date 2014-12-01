@@ -1,0 +1,37 @@
+<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+  <div class="sidebar-nav">
+
+    <% if current_user.roles == 'guest' %>
+      <div class="list-group">
+        <a href="#" class="list-group-item active ">
+          <span class="glyphicon glyphicon-align-justify"></span>
+          <span class='badge pull-right'>
+            <%= @loc_pub.count %>
+          </span> Channel Location CCTV
+        </a>
+        <% @loc_pub.each do |loc| %>
+        <%= link_to "<span class='glyphicon glyphicon-play-circle'></span> #{loc.name}".html_safe, channel_pub_path(loc.id),{class: "list-group-item"} %> 
+        <% end %>
+      </div>
+    <% elsif %>
+      <div class="list-group">
+        <a href="#" class="list-group-item active ">
+          <span class="glyphicon glyphicon-user"></span> Manage User
+        </a>
+        <%= link_to "Create User", new_user_path, class: "list-group-item" %>
+        <%= link_to "List Users", users_path, class: "list-group-item" %>
+        <a href="#" class="list-group-item active ">
+          <span class="glyphicon glyphicon-map-marker"></span> Manage Location
+        </a>
+        <%= link_to "Create Location", new_location_path, class: "list-group-item" %>
+        <%= link_to "List Location", locations_path, class: "list-group-item" %>
+        <a href="#" class="list-group-item active ">
+          <span class="glyphicon glyphicon-record"></span> Manage CCTV
+        </a>
+        <%= link_to "Create Channel", new_channel_path, class: "list-group-item" %>
+        <%= link_to "List Channel", channels_path, class: "list-group-item" %>
+      </div>
+    <% end %>
+
+  </div><!--/.well -->
+</div><!--/span-->

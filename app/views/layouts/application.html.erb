@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cctv</title>
+  <%= favicon_link_tag 'icon.gif' %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render partial:"shared/navbar" %>
+<div class="container">
+  <div class="row row-offcanvas row-offcanvas-right">
+    <%= render partial: "shared/bar_left" %>
+    <div class="col-xs-12 col-sm-9">
+      <p class="pull-right visible-xs">
+        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+      </p>
+			<%= yield %>
+		</div>
+  </div>
+
+  <hr>
+  <footer>
+    <p>&copy; CCTV Project 2013</p>
+  </footer>
+</div>
+<%= javascript_include_tag "application" %>
+</body>
+</html>

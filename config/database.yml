@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  database: cctv_dev
+  pool: 5
+  username: topan
+  password: develop123
+staging:
+  <<: *default
+  database: cctv_staging
+production:
+  <<: *default
+  database: cctv_production
+development:
+  <<: *default
+test:
+  <<: *default
+  database: cctv_test

@@ -1,0 +1,55 @@
+<%= form_for(@channel) do |f| %>
+  <% if @channel.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-block alert-danger fade in ">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Warning!</strong> <%= pluralize(@channel.errors.count, "error") %>
+        <% @channel.errors.full_messages.each do |msg| %>
+        <diV>
+          <%= msg %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  <div class="col-lg-6">
+    <div class="input-group">
+      <div>IP Address</div>
+      <%= f.text_field :ip_address, class: "form-control", placeholder:"Ip Address" %>
+    </div>
+    <div class="input-group">
+      <div>Location </div>
+      <%= f.select(:location_id, options_from_collection_for_select(Location.order("name"), :id, :name, (@channel ? @channel.location_id : '')), {prompt: 'Select Location'}, {class: "form-control"}) %>
+    </div>
+    <div class="input-group">
+      <div>Streaming URL</div>
+      <%= f.text_field :streaming_url, class: "form-control", placeholder:"URL" %>
+    </div>
+    <div class="input-group">
+      <div>Streaming Type</div>
+      <%= f.select(:streaming_type, options_for_select(['Motion Jpeg', 'Video']), {prompt: 'Select Type'}, {class: "form-control"}) %>
+    </div>
+    <div class="input-group">
+      <div>Chanell Name</div>
+      <%= f.text_field :name, class: "form-control", placeholder:"Chanell Name" %>
+    </div>
+    <div class="input-group">
+      <div>Status</div>
+      <%= f.text_field :status, class: "form-control", placeholder:"Status" %>
+    </div>
+    <div class="input-group">
+      <div>Port</div>
+      <%= f.text_field :port, class: "form-control", placeholder:"Port" %>
+    </div>
+    <div class="input-group">
+      <div>Conn Type</div>
+      <%= f.select(:conn_type, options_for_select(['http', 'rtmp']), {prompt: 'Conn Type'}, {class: "form-control"}) %>
+    </div>
+    <div class="block"></div>
+    <button type="button" class="btn btn-default">
+      <%= link_to "Close", channels_path %>
+    </button>
+    <button type="submit" class="btn btn-primary">Save As</button>
+  </div>
+  <div class="block"></div>
+<% end %>

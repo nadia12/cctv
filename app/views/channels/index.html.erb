@@ -1,0 +1,36 @@
+<div class="row">   
+  <div class="bs-example">
+    <div class="panel-heading">List Channels</div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Channel Name</th>
+          <th>Location Channel</th>
+          <th>Ip Address</th>
+          <th>Port</th>
+          <th width="15%">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @channels.each do |channel| %>
+        <tr>
+          <td></td>
+          <td><%= link_to channel.name, channel %></td>
+          <td><%= channel.location.name %></td>
+          <td><%= channel.ip_address %></td>
+          <td><%= channel.port %></td>
+          <td>
+            <%= link_to "<span class='glyphicon glyphicon-wrench'>".html_safe, edit_channel_path(channel) %> 
+            <%= link_to "<span class='glyphicon glyphicon-trash'>".html_safe, channel, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to "<span class='glyphicon glyphicon-eye-open'>".html_safe, channel %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <div>
+      <%= paginate @channels %>
+    </div>
+  </div>
+</div>

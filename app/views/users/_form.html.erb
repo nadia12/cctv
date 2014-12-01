@@ -1,0 +1,56 @@
+<%= f.fields_for(:profile_attributes, user_profile) do |profile| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-block alert-danger fade in ">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>Warning!</strong> <%= pluralize(@user.errors.count, "error") %>
+        <% @user.errors.full_messages.each do |msg| %>
+        <diV>
+          <%= msg %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  <%= profile.hidden_field :id %>
+  <% if current_user.roles == 'admin' %>
+    <%= f.hidden_field :roles, value: 'guest'%>
+  <% end %>
+  <div class="col-lg-6">
+    <div class="input-group">
+      <div>First Name</div>
+      <%= profile.text_field :first_name, class: 'form-control',placeholder:'First Name' %>
+    </div>
+    <div class="input-group">
+      <div>Last Name</div>
+      <%= profile.text_field :last_name, class: 'form-control',placeholder:'Last Name' %>
+    </div>
+    <div class="input-group">
+      <div>Email</div>
+      <%= f.text_field :email, class: 'form-control',placeholder:'Email' %>
+    </div>
+    <div class="input-group">
+      <div>Password</div>
+      <%= f.password_field :password, class: 'form-control',placeholder:'Password' %>
+    </div>
+    <div class="input-group">
+      <div>Password Confirmation</div>
+      <%= f.password_field :password_confirmation, class: 'form-control',placeholder:'Password Confirmation' %>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="input-group">
+      <div>Mobile Phone</div>
+      <%= profile.text_field :mobile_phone, class: 'form-control',placeholder:'Mobile Phone' %>
+    </div>
+    <div class="input-group">
+      <div>Phone</div>
+      <%= profile.text_field :phone, class: 'form-control',placeholder:'Phone' %>
+    </div>
+    <div class="block"></div>
+    <button type="button" class="btn btn-default">
+      <%= link_to "Close", users_path %>
+    </button>
+    <button type="submit" class="btn btn-primary">Save As</button>
+  </div>
+<% end %>

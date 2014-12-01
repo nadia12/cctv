@@ -1,0 +1,17 @@
+<div class="container">
+  <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+	  <div class="form-signin">
+	    <h2 class="form-signin-heading" style="text-align:center">
+	      <span class="glyphicon glyphicon-record" style="font-size:30px;"></span> RECOVERY
+	    </h2>
+	    <hr>
+	    <%= devise_error_messages! %>
+	    <%= f.email_field :email,  class: "form-control", placeholder: "Email address", :autofocus => true %>
+	    <button class="btn btn-lg btn-primary btn-block black" type="submit">Send me reset password</button>
+	    <button class="btn btn-lg btn-primary btn-block red">
+	    	<%= link_to "Back To Sign in", new_session_path(resource_name) %>
+	    </button>
+	  </div>
+  <% end %>
+</div>
+

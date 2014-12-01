@@ -1,0 +1,52 @@
+<% if current_user.roles == 'admin' %>
+<div class="row">
+  <div class="alert alert-warning fade in">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <strong>Welcome To!</strong> Control Panel CCTV Admnistrator.
+  </div>
+</div>
+<% end %>
+
+<% if current_user.roles == 'guest' %>
+  <div class="row">
+    <ul id="myTab" class="nav nav-tabs">
+      <li class="active"><a href="#live" data-toggle="tab">Live View</a></li>
+      <li class=""><a href="#play" data-toggle="tab">Playback</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane fade active in" id="live"> 
+        <% @channel_all.each do |channel| %>
+          <div class="col-6 col-sm-6 col-lg-4 padding-bottom">
+            <h4>
+              <%= channel.name %>
+              <% if channel.user_ids.include?(current_user.id) %>
+                <%= form_for(:favorite, url: down_path, html: {class: "form_up"}, method: "put") do |f| %>
+                  <%= f.hidden_field :channel_id, value: channel.id  %>
+                  <button type="submit" class="glyphicon glyphicon-star-empty up"></button>
+                <% end %>
+              <% elsif %>
+                <%= form_for(:favorite, url: up_path, html: {class: "form_up"}, method: "post") do |f| %>
+                  <%= f.hidden_field :channel_id, value: channel.id %>
+                  <button type="submit" class="glyphicon glyphicon-star-empty none"></button>
+                <% end %>
+              <% end %>
+            </h4>
+            <video id="movie" width="260" height="200" preload autoplay>
+              <source src="rtmp://fl2.sz.xlcdn.com:80/sz=Deltion_College=lb1"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+            </video>
+          </div>
+        <% end %>
+      </div>
+      <div class="tab-pane fade" id="play">
+        <% @channel_all.each do |channel| %>
+          <div class="col-6 col-sm-6 col-lg-4 padding-bottom">
+            <h4><%= channel.name %></h4>
+            <video id="movie"  width="100%" preload autoplay>
+              <source src="rtmp://fl2.sz.xlcdn.com:80/sz=Deltion_College=lb1"  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+            </video>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
