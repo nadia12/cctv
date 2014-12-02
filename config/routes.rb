@@ -8,7 +8,7 @@ CctvProject::Application.routes.draw do
 
 
   get   '/channel_pub/:id',       to: 'home#channel',  as: 'channel_pub'
-  get   '/favorite',              to: 'home#favorite', as: 'favorite'
+  get   '/favorite',              to: 'home#favorite', as: 'my_favorite'
 
   post  '/up',          to: 'favorites#up',   as: 'up'
   match  '/down',       to: 'favorites#down', as: 'down', via: [:get, :post]

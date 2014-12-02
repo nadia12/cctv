@@ -2620,3 +2620,386 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2014-12-02 01:15:16 +0700
 Served asset /glyphicons-halflings-regular.woff - 304 Not Modified (0ms)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /home/nadia/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-02 15:26:03 +0700
+
+PG::ConnectionBad (FATAL:  Peer authentication failed for user "topan"
+):
+  activerecord (4.0.0) lib/active_record/connection_adapters/postgresql_adapter.rb:825:in `initialize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/postgresql_adapter.rb:825:in `new'
+  activerecord (4.0.0) lib/active_record/connection_adapters/postgresql_adapter.rb:825:in `connect'
+  activerecord (4.0.0) lib/active_record/connection_adapters/postgresql_adapter.rb:542:in `initialize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.0.0) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /home/nadia/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /home/nadia/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:53:in `connection'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:51:in `restore_query_cache_settings'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:43:in `rescue in call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:32:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__4005374872182229609__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.3) lib/quiet_assets.rb:23:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/nadia/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/nadia/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/nadia/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/nadia/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /home/nadia/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/nadia/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /home/nadia/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.8ms)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /home/nadia/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-02 15:29:17 +0700
+Processing by HomeController#dashboard as HTML
+Completed 401 Unauthorized in 92ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-12-02 15:29:18 +0700
+Processing by Devise::SessionsController#new as HTML
+PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 5:                WHERE a.attrelid = '"users"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"users"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+Completed 500 Internal Server Error in 39ms
+
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 5:                WHERE a.attrelid = '"users"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"users"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  activerecord (4.0.0) lib/active_record/connection_adapters/postgresql_adapter.rb:768:in `async_exec'
+  activerecord (4.0.0) lib/active_record/connection_adapters/postgresql_adapter.rb:768:in `exec_no_cache'
+  activerecord (4.0.0) lib/active_record/connection_adapters/postgresql/database_statements.rb:138:in `block in exec_query'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract_adapter.rb:425:in `block in log'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract_adapter.rb:420:in `log'
+  activerecord (4.0.0) lib/active_record/connection_adapters/postgresql/database_statements.rb:137:in `exec_query'
+  activerecord (4.0.0) lib/active_record/connection_adapters/postgresql_adapter.rb:915:in `column_definitions'
+  activerecord (4.0.0) lib/active_record/connection_adapters/postgresql/schema_statements.rb:174:in `columns'
+  activerecord (4.0.0) lib/active_record/connection_adapters/schema_cache.rb:114:in `block in prepare_default_proc'
+  activerecord (4.0.0) lib/active_record/connection_adapters/schema_cache.rb:56:in `yield'
+  activerecord (4.0.0) lib/active_record/connection_adapters/schema_cache.rb:56:in `columns'
+  activerecord (4.0.0) lib/active_record/model_schema.rb:208:in `columns'
+  activerecord (4.0.0) lib/active_record/model_schema.rb:242:in `column_defaults'
+  activerecord (4.0.0) lib/active_record/locking/optimistic.rb:169:in `column_defaults'
+  protected_attributes (1.0.3) lib/active_record/mass_assignment_security/core.rb:5:in `initialize'
+  activerecord (4.0.0) lib/active_record/inheritance.rb:27:in `new'
+  activerecord (4.0.0) lib/active_record/inheritance.rb:27:in `new'
+  devise (3.4.1) app/controllers/devise/sessions_controller.rb:9:in `new'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:483:in `_run__2433534302776026510__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/mapper.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__4340363063603683606__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  quiet_assets (1.0.3) lib/quiet_assets.rb:23:in `call_with_quiet_assets'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/nadia/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/nadia/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/nadia/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/nadia/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.3ms)
+  Rendered /home/nadia/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/nadia/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/nadia/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+  [1m[36m (55.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (94.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20131023064504)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (126.3ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (49.7ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (36.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131023064504"]]
+  [1m[36m (6.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateChannels (20131023065428)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (82.3ms)[0m  [1mCREATE TABLE "channels" ("id" serial primary key, "ip_address" integer, "location_id" integer, "name" character varying(255), "status" character varying(255), "port" integer, "conn_type" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131023065428"]]
+  [1m[36m (14.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateLocations (20131023065525)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (59.3ms)[0m  [1mCREATE TABLE "locations" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131023065525"]]
+  [1m[36m (14.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProfiles (20131023065650)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (95.3ms)[0m  [1mCREATE TABLE "profiles" ("id" serial primary key, "first_name" character varying(255), "last_name" character varying(255), "mobile_phone" integer, "phone" integer, "bio" text, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131023065650"]]
+  [1m[36m (11.2ms)[0m  [1mCOMMIT[0m
+Migrating to ChangeColumnTypeIpaddress (20131023083441)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (164.8ms)[0m  [1mALTER TABLE "channels" ALTER COLUMN "ip_address" TYPE character varying(255)[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131023083441"]]
+  [1m[36m (14.8ms)[0m  [1mCOMMIT[0m
+Migrating to RemoveUserId (20131023184407)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "profiles" DROP "user_id"[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131023184407"]]
+  [1m[36m (13.5ms)[0m  [1mCOMMIT[0m
+Migrating to AddColumnProfileable (20131023232504)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (24.6ms)[0m  [1mALTER TABLE "profiles" ADD COLUMN "profileable_id" integer[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "profiles" ADD COLUMN "profileable_type" character varying(255)
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131023232504"]]
+  [1m[35m (23.2ms)[0m  COMMIT
+Migrating to AddColumnRoles (20131024100404)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" ADD COLUMN "roles" character varying(255)
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131024100404"]]
+  [1m[35m (5.3ms)[0m  COMMIT
+Migrating to CreateFavorites (20131025072908)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (129.7ms)[0m  CREATE TABLE "favorites" ("id" serial primary key, "channel_id" integer, "user_id" integer, "status" character varying(255), "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131025072908"]]
+  [1m[35m (11.2ms)[0m  COMMIT
+Migrating to RemoveBio (20131106083758)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "profiles" DROP "bio"
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131106083758"]]
+  [1m[35m (5.5ms)[0m  COMMIT
+Migrating to AddStreamingUrlAndStreamingType (20131106100635)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "channels" ADD COLUMN "streaming_url" character varying(255)
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "channels" ADD COLUMN "streaming_type" character varying(255)[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131106100635"]]
+  [1m[36m (3.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@yahoo.com' LIMIT 1[0m
+  [1m[35mSQL (35.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "roles", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Tue, 02 Dec 2014 08:29:40 UTC +00:00], ["email", "admin@yahoo.com"], ["encrypted_password", "$2a$10$d9joPY9ZUgq3mVpXJPt1s.HFpDel0yiEDhmELS.KxQF9xBJ3F6bFm"], ["roles", "admin"], ["updated_at", Tue, 02 Dec 2014 08:29:40 UTC +00:00]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "profiles" ("created_at", "first_name", "last_name", "profileable_id", "profileable_type", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Tue, 02 Dec 2014 08:29:40 UTC +00:00], ["first_name", "admin"], ["last_name", "master"], ["profileable_id", 1], ["profileable_type", "User"], ["updated_at", Tue, 02 Dec 2014 08:29:40 UTC +00:00]]
+  [1m[35m (20.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mLocation Exists (0.3ms)[0m  SELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Hospital' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Tue, 02 Dec 2014 08:29:40 UTC +00:00], ["name", "Hospital"], ["updated_at", Tue, 02 Dec 2014 08:29:40 UTC +00:00]]
+  [1m[35m (10.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mLocation Exists (0.4ms)[0m  SELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Room 1' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Tue, 02 Dec 2014 08:29:40 UTC +00:00], ["name", "Room 1"], ["updated_at", Tue, 02 Dec 2014 08:29:40 UTC +00:00]]
+  [1m[35m (6.9ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mLocation Exists (0.6ms)[0m  SELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Room 2' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Tue, 02 Dec 2014 08:29:40 UTC +00:00], ["name", "Room 2"], ["updated_at", Tue, 02 Dec 2014 08:29:40 UTC +00:00]]
+  [1m[35m (5.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mLocation Exists (0.6ms)[0m  SELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Room 3' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Tue, 02 Dec 2014 08:29:40 UTC +00:00], ["name", "Room 3"], ["updated_at", Tue, 02 Dec 2014 08:29:40 UTC +00:00]]
+  [1m[35m (5.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mLocation Exists (0.3ms)[0m  SELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Service Center' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Tue, 02 Dec 2014 08:29:40 UTC +00:00], ["name", "Service Center"], ["updated_at", Tue, 02 Dec 2014 08:29:40 UTC +00:00]]
+  [1m[35m (8.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mLocation Exists (0.4ms)[0m  SELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Kitchen' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "locations" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Tue, 02 Dec 2014 08:29:40 UTC +00:00], ["name", "Kitchen"], ["updated_at", Tue, 02 Dec 2014 08:29:40 UTC +00:00]]
+  [1m[35m (7.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@yahoo.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mLocation Exists (0.3ms)[0m  SELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Hospital' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mLocation Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Room 1' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Room 2' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Room 3' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mLocation Exists (0.2ms)[0m  SELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Service Center' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mLocation Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Kitchen' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@yahoo.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mLocation Exists (0.2ms)[0m  SELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Hospital' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mLocation Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Room 1' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mLocation Exists (0.3ms)[0m  SELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Room 2' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mLocation Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Room 3' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mLocation Exists (0.2ms)[0m  SELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Service Center' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mLocation Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Kitchen' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /home/nadia/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-12-02 15:31:15 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/devise (39.5ms)
+Completed 200 OK in 380ms (Views: 347.2ms | ActiveRecord: 3.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'admin@yahoo.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mLocation Exists (0.3ms)[0m  SELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Hospital' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mLocation Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Room 1' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mLocation Exists (0.2ms)[0m  SELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Room 2' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mLocation Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Room 3' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mLocation Exists (0.1ms)[0m  SELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Service Center' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mLocation Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "locations" WHERE "locations"."name" = 'Kitchen' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mUser Load (2.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-12-02 15:32:22 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pJx79ZV3u8rvgGYS5IJfgtZxrTJls9dH+i4OTnVp/8w=", "user"=>{"email"=>"admin@yahoo.com", "password"=>"[FILTERED]", "remember_me"=>"1"}}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@yahoo.com' ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (171.5ms)[0m  [1mUPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = 1[0m  [["remember_created_at", Tue, 02 Dec 2014 08:32:23 UTC +00:00], ["updated_at", Tue, 02 Dec 2014 08:32:23 UTC +00:00]]
+  [1m[35m (33.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 1  [["last_sign_in_at", Tue, 02 Dec 2014 08:32:23 UTC +00:00], ["current_sign_in_at", Tue, 02 Dec 2014 08:32:23 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 02 Dec 2014 08:32:23 UTC +00:00]]
+  [1m[36m (18.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 556ms (ActiveRecord: 225.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-02 15:32:23 +0700
+Processing by HomeController#dashboard as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/dashboard.html.erb within layouts/application (0.6ms)
+  Rendered shared/_navbar.html.erb (0.7ms)
+  Rendered shared/_bar_left.html.erb (0.7ms)
+Completed 200 OK in 29ms (Views: 23.7ms | ActiveRecord: 0.4ms)

@@ -3,8 +3,8 @@ default: &default
   encoding: unicode
   database: cctv_dev
   pool: 5
-  username: topan
-  password: develop123
+  username: 
+  password: 
 staging:
   <<: *default
   database: cctv_staging
