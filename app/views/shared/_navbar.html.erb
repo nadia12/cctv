@@ -13,7 +13,7 @@
       <ul class="nav navbar-nav navbar-right">
         <% if current_user.roles == 'guest' %>
           <li>
-            <%= link_to "<span class='glyphicon glyphicon-star-empty'></span> Favorite Channel".html_safe, favorite_path %>
+            <%= link_to "<span class='glyphicon glyphicon-star-empty'></span> Favorite Channel".html_safe, my_favorite_path %>
           </li>
         <% end %>
         <li class="dropdown">

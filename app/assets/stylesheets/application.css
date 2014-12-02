@@ -15,3 +15,7 @@
 
  *= require source/swipebox
  */
+
+.form-signin .form-control{
+	width: 100%;
+}

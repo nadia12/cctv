@@ -3003,3 +3003,41 @@ Processing by HomeController#dashboard as HTML
   Rendered shared/_navbar.html.erb (0.7ms)
   Rendered shared/_bar_left.html.erb (0.7ms)
 Completed 200 OK in 29ms (Views: 23.7ms | ActiveRecord: 0.4ms)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /home/nadia/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-02 16:18:13 +0700
+Processing by HomeController#dashboard as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/dashboard.html.erb within layouts/application (1.2ms)
+  Rendered shared/_navbar.html.erb (0.8ms)
+  Rendered shared/_bar_left.html.erb (0.8ms)
+Completed 200 OK in 182ms (Views: 127.2ms | ActiveRecord: 4.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-12-02 16:18:16 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4Ferb5N7eCWkWVK0ev+RAx0QpC3qms3nwuE7eIHtBas="}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (29.4ms)[0m  UPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = 1  [["remember_created_at", nil], ["updated_at", Tue, 02 Dec 2014 09:18:16 UTC +00:00]]
+  [1m[36m (21.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 130ms (ActiveRecord: 51.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-02 16:18:16 +0700
+Processing by HomeController#dashboard as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-12-02 16:18:16 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/devise (39.8ms)
+Completed 200 OK in 49ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-12-02 16:18:41 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/devise (2.5ms)
+Completed 200 OK in 22ms (Views: 17.7ms | ActiveRecord: 0.0ms)
