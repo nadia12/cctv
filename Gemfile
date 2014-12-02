@@ -41,14 +41,14 @@ gem 'jbuilder', '~> 1.2'
   gem "exception_notification", :require => "exception_notifier"
 #end
 
-group :assets do
+# group :assets do
   gem 'omniauth'
   gem 'omniauth-facebook'
   gem 'devise'
   gem 'cancan'
   gem 'paperclip'                     # attachment tool
   gem 'mini_magick'
-end
+# end
 
 group :development, :test do
   gem 'debugger'
