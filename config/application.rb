@@ -4,7 +4,7 @@ require 'rails/all'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
-  Bundler.require(*Rails.groups(:assets => %w(development test)))
+  Bundler.require(*Rails.groups(:assets => %w(development test production)))
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
@@ -51,15 +51,11 @@ module CctvProject
     # This will create an empty whitelist of attributes available for mass-assignment for all models
     # in your app. As such, your models will need to explicitly whitelist or blacklist accessible
     # parameters by using an attr_accessible or attr_protected declaration.
+    config.assets.enabled = true
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     config.assets.initialize_on_precompile = true
-    config.action_dispatch.ignore_accept_header = true
-    config.assets.precompile += %w( .svg .eot .woff .ttf )  
-    config.quiet_assets = true
-    config.action_dispatch.default_headers = {
-        'X-Frame-Options' => 'ALLOWALL',
-        'Vary' => 'Accept-Encoding'
-    }
+    config.assets.precompile += %w( .svg .eot .woff .ttf )
+    config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
     
     config.active_record.whitelist_attributes = true
 
